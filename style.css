@@ -1,0 +1,158 @@
+:root {
+  --bg: #f3eee4;
+  --paper: #fbf7f0;
+  --ink: #241c16;
+  --muted: #4f483f;
+  --line: #ddd4c6;
+  --link: #6e2f28;
+  --focus: #8c5a3c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", "Source Han Serif", serif;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 16px 16px 72px;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: #e7dfd2;
+}
+
+h1 {
+  margin: 18px 0 8px;
+  font-size: 1.55rem;
+  line-height: 1.45;
+  font-weight: 600;
+  word-break: keep-all;
+  line-break: strict;
+}
+
+h2 {
+  margin: 28px 0 12px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 4px 0;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.summary,
+.note,
+.meta,
+.when,
+.shown,
+.missing {
+  color: var(--muted);
+}
+
+.summary { margin: 0; }
+
+.facts { margin: 0; }
+
+.facts div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt { color: var(--muted); }
+
+.facts dd { margin: 0; }
+
+.note { margin: 12px 0 0; }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 14rem;
+  color: var(--muted);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 0.92rem;
+}
+
+input,
+select {
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+input:focus,
+select:focus,
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.shown { margin: 14px 0 0; }
+
+.work {
+  border-top: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.when,
+.meta,
+.opening,
+.missing { margin: 0; }
+
+.meta { margin-top: 2px; }
+
+.opening {
+  margin-top: 8px;
+  line-height: 1.85;
+}
+
+.missing {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.work a {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--link);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 0.95rem;
+}
+
+.empty { color: var(--muted); }
+
+@media (min-width: 720px) {
+  .wrap { padding: 32px 24px 80px; }
+  h1 { font-size: 2rem; }
+}
