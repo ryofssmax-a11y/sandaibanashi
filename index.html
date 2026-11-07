@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文学少女風 三題噺 アーカイブ</title>
+  <meta name="description" content="@ryo_miu で毎日投稿している三題噺を、新しい順に読み返せる一覧です。作品名・お題・本歌・冒頭で検索できます。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero-block">
+      <img class="hero" src="assets/header.jpg" width="1280" height="720" alt="夕日の差し込む放課後の文芸部室">
+      <h1>文学少女風 三題噺 アーカイブ</h1>
+      <p class="summary">@ryo_miu で毎日投稿している三題噺を、新しい順に読み返せる一覧です。作品名・お題・本歌・冒頭で検索できます。</p>
+    </header>
+    <main>
+      <section aria-labelledby="scope-heading">
+        <h2 id="scope-heading">収録範囲</h2>
+        <dl class="facts">
+          <div>
+            <dt>収録数</dt>
+            <dd id="fact-count"></dd>
+          </div>
+          <div>
+            <dt>期間</dt>
+            <dd id="fact-period"></dd>
+          </div>
+          <div>
+            <dt>最新</dt>
+            <dd id="fact-latest"></dd>
+          </div>
+        </dl>
+        <p class="note">投稿記録ファイルにある作品のみ収録しています。過去全件を保証するものではありません。日時は記録上の投稿時刻（JST）です。</p>
+      </section>
+      <section aria-labelledby="list-heading">
+        <h2 id="list-heading">作品一覧</h2>
+        <div class="filters">
+          <label class="field">キーワード
+            <input id="query" type="search" placeholder="例：図書室、宮沢賢治" autocomplete="off" enterkeyhint="search">
+          </label>
+          <label class="field">月
+            <select id="month">
+              <option value="all">すべて</option>
+            </select>
+          </label>
+        </div>
+        <p id="shown" class="shown" aria-live="polite"></p>
+        <div id="list"></div>
+      </section>
+    </main>
+  </div>
+  <script src="works.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
